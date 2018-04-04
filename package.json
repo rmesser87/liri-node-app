@@ -13,6 +13,11 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "dependencies": {
+    "node-spotify-api": "^1.0.7",
+    "twitter": "^1.7.1",
+    "request": "^2.85.0"
+  },
   "bugs": {
     "url": "https://github.com/rmesser87/liri-node-app/issues"
   },
