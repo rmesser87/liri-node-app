@@ -1,19 +1,16 @@
 require("dotenv").config();
 
-var apiKeys = require("./keys.js");
+var keys = require("./keys.js");
 
 var Twitter = require('twitter');
 
 var request = require("request");
 
-var SpotifyNpm = require('node-spotify-api');
+var Spotify = require('node-spotify-api');
 
 var spotify = new Spotify(keys.spotify);
 
 var client = new Twitter(keys.twitter);
-
-
-// var movieName = "";
 
 var command = process.argv[2];
 
@@ -43,7 +40,6 @@ function spotifySearch() {
         });
 }
 
-
 function omdbSearch() {
     var queryUrl = "http://www.omdbapi.com/?t=" + userData + "&y=&plot=short&apikey=trilogy";
 
@@ -61,7 +57,6 @@ function omdbSearch() {
         }
     });
 }
-
 
 function twitterSearch() {
     var params = { screen_name: 'rbricem' };
